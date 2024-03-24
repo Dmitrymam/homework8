@@ -1,0 +1,36 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.text{
+    font-style: italic;
+    font-size: 20px;
+}
+
+.text1{
+text-decoration: line-through;
+}
+
+.text2{
+    text-transform: uppercase;
+    text-align: center;
+}
+.text3{
+    color: blueviolet;
+    word-spacing: 30px;
+    text-decoration: overline;
+    text-decoration-style: wavy;
+}
+.text4{
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+
+
+
