@@ -1,0 +1,32 @@
+
+
+.section{
+    width: 100%;
+    position: relative;
+    background: salmon;
+    position: relative;
+    height: calc(100vh + 500px);
+}
+
+.text{
+}
+.block{
+    background: darkgreen;
+    max-width: 100%;
+    height: 100px;
+    right: 50px;
+    left: 50%;
+    bottom: 100px;
+    position: fixed;
+}
+
+.circle{
+    position: fixed;
+    background: slateblue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 55%;
+    bottom: 150px;
+}
+

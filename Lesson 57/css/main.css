@@ -1,0 +1,35 @@
+
+div{
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+}
+h1::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: plum;
+    border-radius: 50%;
+    border: 2px solid rgb(144, 132, 132);
+    position: absolute;
+    transform: translate(3px,-7px);
+}
+
+h1::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color:darkgoldenrod;
+    border-radius: 50%;
+    border: 2px solid rgb(144, 132, 132);
+    position: absolute;
+    transform: translate(250px, -79%);
+}
+
+
