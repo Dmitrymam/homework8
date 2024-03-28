@@ -1,0 +1,65 @@
+
+body{
+    background-color: black;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: darkslateblue;
+    border-radius: 20px;
+    margin: 200px auto;
+    position: relative;
+    transition: background-color 4s, display 4s 
+}
+
+.box:hover{
+    background-color: chocolate;
+}
+
+
+.download {
+        width: 0px;
+        height: 30px;
+        position: absolute;
+        top: -50%;
+        left: -100%;
+        height: 30px;
+        background-image: linear-gradient(45deg,rgb(103, 11, 11) 12%, rgb(75, 137, 92) 40%, rgb(115, 127, 44) 90%);
+        transition: width 4s;
+}
+
+.box:hover > div{
+    width: 600px;
+    height: 30px;
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    height: 30px;
+    background-image: linear-gradient(45deg,rgb(103, 11, 11) 12%, rgb(75, 137, 92) 40%, rgb(115, 127, 44) 90%);
+}
+
+p{
+    visibility: hidden;
+    margin: 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition-delay: 4s;
+    
+    }
+
+.box:hover > p{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
