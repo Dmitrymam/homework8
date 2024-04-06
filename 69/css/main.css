@@ -1,0 +1,261 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    width: 288px;
+    background: #D0DCE7;
+    padding: 18px 0px;
+    border-radius: 100px;
+    color: #1D6FB6;
+    font-webuttonight: 500px;
+    text-align: center;
+    transition: all 1s ease-in-out;
+}
+.button:hover{
+background-color: #83ADD3;
+color: #F8FCFF;
+}
+
+
+/* ------header------ */
+
+.header {
+    padding: 30px 0px;   
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+.header__nav {
+    justify-content: start
+}
+.header__list {
+    display: flex;
+}
+.header__item {
+    margin-right: 30px;
+}
+
+.header__item:last-child{
+    margin-right: 0px;
+}
+
+
+.header__link:hover {
+    color: blueviolet;
+}
+.header__logo {
+    margin-left: 203px;
+}
+.header__socials {
+    margin-left: auto;
+}
+
+
+
+
+/* -------main------ */
+
+
+.hero-section {
+    padding: 120px 0px;
+    text-align: center;
+    color: #F8FCFF;
+    position: relative;
+}
+
+.hero-section__title {
+    
+    font-weight: 600px;
+    font-size: 52px;
+    margin-bottom: 30px;
+}
+.hero-section__advantage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section__advantage path{
+    transition: all 1s ease-out;
+}
+
+
+.hero-section__advantage:hover path{
+    fill: brown;
+}
+
+.hero-section__text {
+    font-size: 24px;
+    margin-left: 18px;
+    margin-bottom: 15px;
+}
+.hero-section__text:last-child {
+    margin-bottom: 0px;
+}
+
+.hero-section__video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    z-index: -1;
+}
+
+
+
+.button__position{
+    margin: 40px auto 0px auto;
+}
+
+.section-content {
+    padding:  120px 0px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar {
+    padding: 30px 108px 0px 30px;
+    border: 2px solid #D0DCE7;
+    height: 1170px;
+}
+
+.sidebar__item {
+    width: 144px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+
+.sidebar__link:hover {
+    color: blueviolet;
+}
+
+
+.product-laptop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 120px;
+}
+
+
+.product-laptop__img{
+    padding-bottom: 100%; 
+
+}
+.product-laptop__img img{
+    position: absolute;
+}
+.product-laptop_img1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.product-laptop_img10{
+    grid-column: -1 / -3;
+    grid-row: 3 / 5;
+}
+
+
+.product-laptop__hover{
+    position: relative;
+    overflow: hidden; 
+}
+
+.product-laptop_translate{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    width: 100%;
+    height: 27%;
+    background-color: #0e72c9;
+    opacity: 0.7;
+    transition: all 1s ease-out;
+}
+
+.product-laptop_translate p{
+    font-weight: 500;
+    font-size: 100%;
+    color: #F8FCFF;
+    margin-top: 8%;
+}
+.product-laptop__hover--font p{
+    font-size: 150%;
+    margin-top: 10%;
+}
+
+.product-laptop__hover:hover .product-laptop_translate{
+    width: 100%;
+    transform: translateY(-100%);
+}
+
+
+
+
+.product-watch {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.product-watch__inner {
+   border: 1px solid #D9D9D9;
+   position: relative;
+}
+
+
+.button__card-position{
+ margin: 30px auto;
+}
+
+.product-watch__hover{
+    width: 130px;
+    border-radius: 100px;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 18px 29px;
+    text-align: center;
+    color: #1D6FB6;
+    font-weight: 500;
+    transition: all 2s;
+}
+
+.product-watch__inner:hover .product-watch__hover{
+    width: 180px;
+    text-align: center;
+}
+
+/* -----footer----- */
+
+.footer{
+    background: #788088;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer span {
+    margin-left: 10px;
+}
+
