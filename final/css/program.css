@@ -1,0 +1,276 @@
+
+.program {
+}
+
+.program__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.program__heading {
+}
+
+.program__title {
+    margin-bottom: 20px;
+}
+
+.program__text {
+}
+
+
+
+
+
+
+
+.tab-controls {
+    display: flex;
+    gap: 25px;
+}
+.tab-controls__item {
+}
+.tab-controls__link {
+    display: block;
+    padding: 14px 30px;
+    box-shadow: 0px 4px 20px rgba(206, 195, 185, 0.3);
+    border-radius: 100px;
+    transition: all 1s;
+    white-space: nowrap;
+}
+
+.tab-controls__link:hover {
+    box-shadow: 0px 4px 20px rgba(206, 195, 185, 0.3);   
+    background-color: rgb(255, 224, 203);
+}
+
+.tab-controls__link--active{
+    box-shadow: 0px 4px 20px rgba(206, 195, 185, 0);  
+    background-color: rgb(255, 224, 203);
+    border-radius: 100px;
+}
+
+.tab-content {
+display: none;
+}
+
+.tab-content--show{
+    display: block
+}
+
+.program__tab-content{
+    margin-bottom: 40px;
+}
+
+/* -----аккоридон-----*/
+
+
+.accordion-list {
+}
+.accordion-list__item {
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.accordion-list__item:last-child {
+    margin-bottom: 0px;
+}
+
+.accordion-list__item--opened {
+}
+.accordion-list__control {
+    padding: 40px 30px;
+    gap: 15px;
+    background-color: transparent;
+    font-size: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    transition: all 1s;
+}
+
+.accordion-list__item--opened .accordion-list__control{
+    padding-bottom: 20px;
+    transition: all 1s;
+}
+
+
+.accordion-list__control-title {
+    font-family: "Gabriola";
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 90%;
+}
+.accordion-list__control-icon {
+    border: 1.5px solid var(--accent-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+   flex-shrink: 0;
+}
+
+.accordion-list__control-icon path{
+    transition: all 1s;
+}
+
+.accordion-list__control:hover .accordion-list__control-icon{
+    background-color: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+.accordion-list__control:hover .accordion-list__control-icon path{
+    fill: var(--general-bg);
+}
+
+.accordion-list__item--opened .accordion-list__control-icon{
+    background-color: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+.accordion-list__item--opened .accordion-list__control-icon path{
+    fill: var(--general-bg);
+}
+
+.accordion-list__control-icon svg{
+    margin-left: 2px;
+}
+
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.accordion-content {
+    padding: 0px 30px 40px;
+    display: flex;
+    gap: 80px;
+}
+.accordion-content__col:first-child{
+    max-width: 507px;
+    width: 100%;
+}
+.accordion-content__title {
+    color: rgb(206, 170, 208);
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.accordion-content__list {
+    
+}
+.accordion-content__item {
+    margin-bottom: 20px;
+    display: flex; 
+    gap: 8px;
+}
+
+.accordion-content__item:last-child{
+    margin-bottom: 0;
+}
+
+.accordion-content__icon {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgb(206, 170, 208);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+.accordion-content__text {
+    max-width: 263px;
+}
+
+
+
+
+.program__bottom {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+.program__action {
+    display: grid;
+    grid-template: repeat(3, auto) / 0.9fr 0.54fr;
+    gap: 44px 40px;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.program__discount {
+    background-color: var(--accent-bg);
+    padding: 40px 40px 20px 40px;
+    border-radius: 20px;
+    grid-row: 1 / 3;
+}
+.program__discount-value {
+    font-family: "Gabriola";
+    font-weight: 400;
+    font-size: 74px;
+    line-height: 82%;
+    transform-origin: 0 0;
+    color: var(--accent-color);
+    margin-bottom: 7px;
+    margin-left: 13%;
+    animation: discount-big .8s linear infinite  alternate;
+}
+
+@keyframes discount-big {
+    0%{
+        transform: scale(1);
+        color: var(--accent-color);
+        
+    }
+    100%{
+        transform: translateX(4%) scale(1.1);
+color: #FF9138;
+
+    }
+}
+
+.program__discount span {
+    font-size: 16px;
+    margin-left: 35%;
+}
+
+.program__price {
+}
+.program__price-text {
+    color: #CEAAD0;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.program__price-value {
+    font-family: "Gabriola";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 90%;
+}
+
+
+
+.program__price-value--big{
+    font-size: 50px;
+    color: #312C27;
+}
+
+.program__action a {
+    grid-column: 1 / -1;
+}
+
+.program__img img{
+    width: 100%;
+}

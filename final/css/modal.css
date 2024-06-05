@@ -1,0 +1,114 @@
+.modal {
+    position: fixed;
+    background-color: rgba(12, 11, 11, 0.314);
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    padding: 15px;
+}
+
+.body--opened-modal .modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__window {
+    background-color: var(--general-bg);
+    max-width: 428px;
+    padding: 0px 60px 60px;
+    position: relative;
+    border-radius: 20px;
+}
+.modal__cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal__cancel path, .modal__cancel rect{
+    transition: all 1s;
+}
+
+.modal__cancel:hover path {
+    stroke:rgb(172, 144, 122);
+}
+
+.modal__cancel:hover  rect{
+    stroke:rgb(172, 144, 122);
+}
+
+
+.modal__img {
+    margin: -65px 0px 15px 13px;
+    max-width: 100%;
+}
+.modal__title {
+    font-family: "Gabriola";
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 90%;
+    margin-bottom: 10px;
+}
+.modal__text {
+    margin-bottom: 30px;
+}
+.modal__form {
+}
+
+.modal__form-label{
+    margin-bottom: 10px;
+}
+
+.field{
+    position: relative;
+    display: block;
+}
+
+.field span{
+ position: absolute;
+ top: 12px;
+ left: 28px;
+ font-size: 11px;
+ color: rgb(172, 144, 122);
+ opacity: 0;
+ transition: all 1s;
+ visibility: hidden;
+}
+.field__input {
+    display: block;
+    border: 1px solid rgb(172, 144, 122);
+    border-radius: 100px;
+    padding: 19px 42px 19px 28px;
+    width: 100%;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+.field__input:hover {
+    border-color: var(--accent-color);
+}
+
+.field__input::placeholder {
+    color: rgb(172, 144, 122);
+    transition: all 1s;
+}
+
+.field__input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.field__input:focus {
+    padding: 26px 42px 12px 28px;
+}
+
+.field__input:focus + span {
+    opacity: 1;
+    visibility: visible;
+}
+
+

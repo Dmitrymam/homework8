@@ -1,0 +1,129 @@
+.contact {
+    padding: 140px 0px;
+    background: url("../img/bg/bg-footer.png") 50% 0% / cover no-repeat;
+}
+
+.contact__inner {
+    display: flex;
+    align-items: end;
+    gap: 84px;
+    position: relative;
+}
+
+
+.contact__inner::before{
+    content: url(../img/content/bery1.png);
+    position: absolute;
+    top: -6%;
+    left: 0;
+}
+
+.contact__inner::after{
+    content: url(../img/content/bery2.png);
+    position: absolute;
+    top: 10%;
+    right: 0;
+}
+
+
+.contact__img img{
+    width: 100%;
+    filter: drop-shadow(0px 4px 30px #C6B0A1);
+}
+.contact__body {
+    max-width: 420px;
+}
+.contact__title {
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+.contact__form {
+}
+.contact__form-label {
+    margin-bottom: 10px;
+}
+
+.contact__input{
+
+}
+
+.contact__input {
+    display: block;
+    border: 1px solid rgb(172, 144, 122);
+    border-radius: 100px;
+    padding: 19px 42px 19px 28px;
+    width: 100%;
+    font-size: 16px;
+    transition: all 1s;
+    margin-bottom: 20px;
+}
+
+.contact__input:hover {
+    border-color: var(--accent-color);
+}
+
+.contact__input::placeholder {
+    color: rgb(172, 144, 122);
+    transition: all 1s;
+}
+
+.contact__input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.contact__check-label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    max-width: 288px;
+    font-size: 13px;
+    margin-bottom: 20px;
+
+
+}
+
+.contact__check-label a {
+    text-decoration: underline;
+    transition: all .5s;
+}
+
+.contact__check-label a:hover {
+    color: var(--accent-color);}
+
+.contact__checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #AC907A;
+    border-radius: 4px;
+    transition: all 1s;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact__checkbox::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../img/icons/contacts/checkbox.svg) 70% 60% no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.contact__checkbox:hover {
+    border: 1.5px solid var(--accent-color);
+}
+
+.contact__checkbox:checked {
+    border: 1.5px solid var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
+}
+

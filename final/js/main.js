@@ -1,206 +1,210 @@
-burgerButton = document.querySelector(".header__burger-button")
 
 
-burgerButton.addEventListener("click", function(event){
-cross = event.target;
+// бургер меню
+document.addEventListener("click", burgerInit);
 
+function burgerInit(e){
+  const target = e.target;
+  const burgerIcon = target.closest(".burger-icon")
+  const burgerNavLink = target.closest(".nav__link")
+  if (!burgerIcon && !burgerNavLink) return
 
-navHeader = document.querySelector(".header__nav")
-ulHeader = document.querySelector(".header__list")
-content =  document.querySelector(".header__content")
+  if ( document.documentElement.clientWidth > 900) return
 
-if (cross.classList.contains("header__burger--to-cross") === false)
-{
-    cross.classList.add('header__burger--to-cross')
-    navHeader.classList.add('header__burger-nav')
-    ulHeader.classList.add('header__burger-list')
-content.style.display='none'
-}
-else{
-    cross.classList.remove("header__burger--to-cross")
-    navHeader.classList.remove('header__burger-nav')
-    ulHeader.classList.remove('header__burger-list')
-    content.style.display='flex'
-}
-
-
-}
-)
-
-
-const modal = document.querySelector(".modal")
-modal.addEventListener("click", function(event){
-
-    
-console.log(event.currentTarget)
-
-  if(event.target.classList.contains("modal") )
-  {modal.classList.add("hidden")}
-})
-
-
-
-const crossModal = document.querySelector(".modal__cancel")
-
-crossModal.addEventListener("click", function(event){
-  event.currentTarget
-  modal.classList.add("hidden")
-}
-)
-
-
-
-
-
-const controlsPlay = document.querySelector(".about__controls-play") 
-
-controlsPlay.addEventListener("click", function(event){
-event.target.classList.contains("about__controls-play")
-modal.classList.remove("hidden")
-})
-
-
-// -------tab------
-
-const tab = document.querySelector(".tab")
-
-tab.addEventListener("click", function(event){
-  event.preventDefault();
-  const tabButton = event.target.closest(".tab__link")
-  const tabItem = tabButton.parentElement
-  const tabItems = Array.from(document.querySelectorAll(".tab__item"))
-  const tabButtonAtrribute = tabButton.getAttribute("href")
-  const tabContent = document.querySelector(tabButtonAtrribute)
-  const tabContents = Array.from(document.querySelectorAll(".tab__content"))
-
-
-  tabItems.forEach(el => {
-    if(el.classList.contains("tab__item--active")){
-      el.classList.remove("tab__item--active")
-    }
-  })
-  if (tabItem.classList.contains("tab__item--active")) return
-  tabItem.classList.toggle("tab__item--active")
-  
- 
-
-
-  tabContents.forEach(el => {
-   if(!el.classList.contains("hidden")) {
-    el.classList.add("hidden")
-   }
-  })
-  tabContent.classList.remove("hidden")
-
-})
-
-// -----accordion-------
-
-accordions = Array.from(document.querySelectorAll(".accordion"))
-
-
-accordions.forEach(el => {
-  el.addEventListener("click", function(event){
-    const accordionButton = event.target.closest(".accordion__button");
-    const accordionContent = accordionButton.nextElementSibling;
-    const accordion = event.currentTarget
-    const accordionContents = Array.from(accordion.querySelectorAll(".accordion__content"))
-
-
-
-    
-if (accordionContent.classList.contains("hidden"))
-{accordionContent.classList.remove("hidden")
-accordionButton.classList.add("accordion__button-control--active")
-}
-else{accordionContent.classList.add("hidden")
-accordionButton.classList.remove("accordion__button-control--active")}
-
-
+  if(burgerIcon){
+    e.preventDefault();
   }
-  )
+
+  if(!document.body.classList.contains("body--opened-menu")){
+    document.body.classList.add("body--opened-menu")
+  }
+  else{
+    document.body.classList.remove("body--opened-menu")
+  }
+  
+  }
+
+
+// табы
+
+const tabControls = document.querySelector(".tab-controls")
+
+tabControls.addEventListener("click", switchTab)
+
+function switchTab(event) {
+  event.preventDefault();
+  const tabControl = event.target.closest(".tab-controls__link")
+  if (!tabControl) return
+  const tabControlID = tabControl.getAttribute("href");
+  const tabContent = document.querySelector(tabControlID) 
+  const tabContentActive = document.querySelector(".tab-content--show")
+  const tabControlActive = document.querySelector(".tab-controls__link--active")
+
+  tabControlActive.classList.remove("tab-controls__link--active")
+  tabControl.classList.add("tab-controls__link--active")
+  
+
+  tabContentActive.classList.remove("tab-content--show")
+  tabContent.classList.add("tab-content--show");
 }
-)
 
 
-// --------slide-------
+//  аккордион
 
+const accordionLists = document.querySelectorAll(".accordion-list")
+
+// document.querySelector(".accordion-list__item--opened .accordion-list__content").style.maxHeight = document.querySelector(".accordion-list__item--opened .accordion-list__content").scrollHeight + "px"
+
+accordionLists.forEach(el => {
+  el.addEventListener("click", function(event){
+    event.preventDefault();
+    const accordionList = event.currentTarget;
+    const accordionItemOpened = accordionList.querySelector(".accordion-list__item--opened")
+
+    const accordionContentOpened = accordionList.querySelector(".accordion-list__item--opened .accordion-list__content")
+
+    const accordionButton = event.target.closest(".accordion-list__control")
+    if(!accordionButton) return
+
+    const accordionItem = accordionButton.parentElement;
+    const accordionContent = accordionButton.nextElementSibling;
+
+    if(accordionItemOpened && accordionContentOpened !== accordionContent){
+      accordionItemOpened.classList.remove("accordion-list__item--opened")
+      accordionContentOpened.style.maxHeight = null
+    }
+  
+
+
+    
+
+    accordionItem.classList.toggle("accordion-list__item--opened")
+  
+    if (accordionItem.classList.contains("accordion-list__item--opened")) {
+  accordionContent.style.maxHeight = accordionContent.scrollHeight + "px"
+  }
+  else{
+    accordionContent.style.maxHeight = null;
+  }
+
+}
+  )
+})
+
+
+  // модальное окно
+
+ const modal = document.querySelector(".modal")
+ const modalButton = document.querySelector(".about__img-button")
+
+
+ modalButton.addEventListener("click", openModal)
+ modal.addEventListener("click", closeModal)
+
+ function openModal(event) {
+  event.preventDefault();
+  document.body.classList.add('body--opened-modal')
+ }
+  
+function closeModal(event){
+  event.preventDefault();
+
+  const target = event.target
+
+
+  if (target.closest(".modal__cancel") || target.classList.contains("modal")){
+    document.body.classList.remove('body--opened-modal')
+  }
+}
+
+// -----------слайдер-галерея--------
 
 new Swiper('.gallery__slider', {
-  slidesPerView: 3,
-  spaceBetween: 32,
-  // If we need pagination
+
+  slidesPerView: 1.5,
+  spaceBetween: 15,
+
+
   pagination: {
     el: '.gallery__pagination',
     type: 'fraction'
   },
 
-  // Navigation arrows
   navigation: {
-    nextEl: '.gallery__button-next',
-    prevEl: '.gallery__button-prev',
+    nextEl: '.gallery__next',
+    prevEl: '.gallery__prev',
   },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 2
+  breakpoints:{
+    450:{
+      slidesPerView: 2,
+      spaceBetween: 15,
     },
 
-    630: {
-      slidesPerView: 3
+
+600:{
+  slidesPerView: 3,
+  spaceBetween: 15,
+},
+
+
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 32,
     },
-    
-    1201: {
-      slidesPerView: 4
-    }
+
+
+
+  1100: {
+    slidesPerView: 4,
+    spaceBetween: 32,
   }
 
+
 }
+}
+);
 
-);   
+// ------слайдер-отзывы-------
 
-
-// ---------scrollbar-------
 
 new Swiper('.testimonials__slider', {
 
-  slidesPerView: 1.2,
+  slidesPerView: 1,
+  spaceBetween: 0,
   centeredSlides: true,
 
-  // Navigation arrows
+
   navigation: {
-    nextEl: '.testimonials__button-next',
-    prevEl: '.testimonials__button-prev',
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
   },
 
   // And if we need scrollbar
   scrollbar: {
     el: '.testimonials__scrollbar',
-    draggable: true,
   },
 
-  breakpoints: {
-    781: {
-      slidesPerView: 1.2
-      },
+  breakpoints:{
+   
+    900: {
+      slidesPerView: 1.5
+    },
 
-    981: {
-      slidesPerView: 1.6
-      },
-
-    1101: {
-    slidesPerView: 2
-    }
+  1200: {
+    slidesPerView: 2.1
   }
-});
 
-const inputTels = document.querySelectorAll('[type="tel"]')
-
-const inputTel = new Inputmask("+7 (999)-999-99-99");
-
-inputTel.mask(inputTels)
+}
+}
+);
 
 
+// -----маска для телефона------
+
+const telInputs = document.querySelectorAll('input[type="tel"]')
+const im = new Inputmask("+7 (999) 99 99-99")
+im.mask(telInputs)
 
 
 
