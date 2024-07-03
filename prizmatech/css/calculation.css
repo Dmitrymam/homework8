@@ -1,0 +1,210 @@
+
+.calculation {
+   
+}
+
+
+
+
+.calculation__title {
+    margin-bottom: 40px;
+}
+
+.calculation__LED{
+    background-color: rgba(249, 249, 249, 1);
+    border: 1px solid rgba(241, 87, 61, 1);
+border-right: none;
+border-left: none;
+}
+
+.calculation__LED-inner{
+    
+display: flex;
+gap: 16px;
+}
+
+
+.calculation__LED-left {
+    padding: 50px 0px 40px 0px;
+    
+    max-width: 320px;
+    flex-shrink: 0;
+}
+.calculation__LED-left-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.calculation__LED-left-list {
+}
+
+
+.calculation__LED-left-list label{
+    margin-bottom: 25px;
+    color:  rgba(112, 112, 112, 1);
+    font-size: 18px;
+}
+
+.calculation__LED-left-list label:nth-child(2){
+    margin-bottom: 40px;
+}
+
+.calculation__LED-left-list label:nth-child(6){
+    margin-bottom: 16px;
+}
+
+
+
+.calculation__LED-left-list label:last-child{
+    margin-bottom: 0px;
+}
+
+.calculation__LED-left-select{
+    margin-top: 10px;
+    position: relative;
+    max-width: 250px;
+}
+
+.calculation__LED-left-select::after {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    transform: translateX(-100%);
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/icons/calculation/arrow-select.svg);
+}
+
+.calculation__LED-left-range{
+    margin-top: 10px;
+    height: 52px;
+}
+
+.calculation__LED-left-range input{
+    width: 100%;
+}
+
+.calculation__LED-left-range input:first-child{
+    padding: 9px 0px 10px 20px;
+    font-size: 18px;
+    font-family: 'Gotham Pro';
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1.5px solid;
+    border-color: rgba(247, 200, 193, 1);
+    border-bottom: none;
+    background: rgba(255, 255, 255, 1);
+}
+
+.calculation__LED-left-range input:last-child{
+    transform: translateY(-220%);
+    appearance: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 5px;
+}
+
+.calculation__LED-left-range input:last-child::-webkit-slider-thumb{
+    appearance: none;
+    background: rgba(241, 87, 61, 1);
+    cursor: pointer;
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+
+.calculation__LED-left-select select {
+    width: 100%;
+    padding: 9.3px 15px 9.3px 20px;
+    appearance: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Gotham Pro";
+}
+
+
+
+
+.calculation__LED-left-item-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+.calculation__LED-right{
+    position: relative;
+    display: flex;
+   width: 100%;
+   justify-content: end;
+   margin-bottom: 36px;
+}
+
+
+
+.calculation__LED-right-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateX(35px);
+    margin-bottom: 30px;
+    clip-path: url(#clipPath)
+}
+
+.calculation__LED-right-img img {
+    transform: translateX(-35px);
+}
+
+.calculation__LED-right-img svg {
+ margin-left: 3;
+}
+
+
+
+.calculation__LED-right-img img {
+    
+}
+
+
+.calculation__LED-right-flex {
+display: flex;
+max-width: 1380px;
+align-items: end;
+justify-content: end;
+}
+.calculation__LED-right-square {
+    text-align: center;
+    margin-right: 74px;
+}
+
+.calculation__LED-right-title {
+    color:  rgba(112, 112, 112, 1);
+    margin-bottom: 20px;
+
+}
+
+.calculation__LED-right-square p {
+    font-size: 40px;
+}
+
+
+
+
+.calculation__LED-right-buttons {
+   display: flex;
+   gap: 40px;
+}
+
+.calculation__LED-square-mobile, .calculation__LED-img-mobile, .calculation__LED-buttons-mobile .button {
+    display: none;
+}
+
+

@@ -1,0 +1,22 @@
+
+.help-LED {
+    padding: 50px 0px;
+    background: rgba(240, 240, 240, 1);
+}
+
+.help-LED__title {
+    margin-bottom: 40px;
+}
+
+.help-LED__form {
+    font-size: 18px;
+}
+.help-LED__field {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.help-LED__input{
+    max-width: 300px;
+}

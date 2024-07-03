@@ -1,0 +1,142 @@
+
+/* ------modal-city------- */
+
+
+.modal-city {
+    position: fixed;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+     background: rgba(19, 16, 24, 0.5);
+   
+}
+.modal-city__window {
+    padding: 40px 50px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 474px;
+    background: rgba(255, 255, 255, 1);
+    flex-grow: 1;
+}
+
+.modal-city__cancel{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+}
+
+
+.modal-city__cancel path{
+    transition: all .5s;
+}
+
+.modal-city__cancel:hover path{
+    fill:rgba(241, 87, 61, 1); ;
+}
+
+.modal-city__title {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.modal-city__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 67px;
+}
+.modal-city__item {
+}
+.modal-city__link {
+    transition: all .5s;
+}
+
+.modal-city__link:hover {
+    color:rgba(241, 87, 61, 1); ;
+}
+
+/* --------modal-consultation------- */
+
+.modal-consultation {
+    position: fixed;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(19, 16, 24, 0.5);
+}
+.modal-consultation__window {
+    padding: 40px 50px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 497px;
+    background: rgba(255, 255, 255, 1);
+    flex-grow: 1;
+}
+.modal-consultation__cancel {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+}
+.modal-consultation__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.modal-consultation__form {
+}
+
+.modal-consultation_input{
+    
+    background-color:  rgba(240, 240, 240, 1);
+    margin-bottom: 20px;
+    max-width: 382px;
+}
+
+.modal-consultation_input::placeholder{
+    font-size: 16px;
+}
+
+.input-textarea{
+    height: 150px;
+}
+
+
+.modal-consultation__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    margin-bottom: 30px;
+
+}
+.modal-consultation__checkbox-element{
+    appearance: none;
+    border: 1px solid rgba(241, 87, 61, 1);
+    border-radius: 5px;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+}
+
+.modal-consultation__checkbox-element:hover{
+    cursor: pointer;
+}
+
+.modal-consultation__checkbox-element:checked{
+    background-color: rgba(241, 87, 61, 1);
+   }
+
+
+.modal-consultation__checkbox-element:checked::after{
+    content: url("../img/icons/modal/modal_checkbox.svg");
+}
+
+
+.modal-consultation__button{
+    margin: 0 auto;
+}

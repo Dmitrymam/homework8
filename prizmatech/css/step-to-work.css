@@ -1,0 +1,54 @@
+
+
+
+.step-to-work {
+}
+
+.step-to-work__title {
+    margin-bottom: 55px;
+}
+.step-to-work__list {
+    display: grid;
+    grid-template-columns: repeat(7, 0.7fr);
+    gap: 46px;
+}
+.step-to-work__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+  
+}
+
+.step-to-work__item:last-child .step-to-work__img img:last-child{
+    display: none;
+}
+
+
+.step-to-work__img {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(241, 87, 61, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+
+
+.step-to-work__img img:last-child{
+    position: absolute;
+    right: -120px;
+}
+
+
+
+
+

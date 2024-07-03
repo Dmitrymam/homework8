@@ -1,0 +1,162 @@
+
+
+.our-projects__inner{
+position: relative;
+}
+
+
+.swiper {
+}
+.our-projects__slider {
+ overflow: visible;
+ z-index: 0;
+}
+.swiper-wrapper{
+}
+.our-projects__wrapper {
+}
+.swiper-slide {
+}
+.table-box {
+}
+.button {
+}
+.our-projects__button {
+}
+.our-projects__bg {
+}
+.our-projects__controls {
+}
+.swiper-button-prev {
+}
+.our-projects__control-left {
+}
+.swiper-button-next {
+}
+.our-projects__control-right {
+}
+
+
+
+.our-projects__slide{
+padding: 75px 0px;
+transition: all .5s;
+opacity: 0;
+}
+
+
+
+.our-projects__slide.swiper-slide-active{
+    opacity: 1;
+}
+
+
+.our-projects__bg{
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    z-index: -1;
+}
+
+
+.our-projects__controls {
+    top: 45%;
+    left: -60px;
+    position: absolute;
+    display: flex;
+    gap: 1400px;
+}
+.our-projects__control-left, .our-projects__control-right  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(241, 87, 61, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.our-projects__control-left:hover, .our-projects__control-right:hover  {
+    background-color: rgba(241, 87, 61, 1);;
+}
+
+
+.our-projects__control-left.swiper-button-disabled, .our-projects__control-right.swiper-button-disabled{
+    transition: all 0.5s;
+    background-color:  rgb(154, 149, 149);
+    cursor: auto;
+}
+
+
+.control__arrow-right {
+}
+
+.our-projects__title{
+    margin-bottom: 40px;
+    
+}
+
+.table-box{
+    max-width: 536px;
+    margin-left: auto;
+    padding: 15px 20px;
+    box-shadow: 1px 1px 50px 50px rgba(19, 16, 24, 0.7);
+    background: rgba(19, 16, 24, 0.7);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+.table {
+    font-size: 20px;
+}
+
+
+caption{
+    font-family: 'Gotham Pro';
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight:  bold;
+    /* color: rgba(255, 255, 255, 1); */
+
+
+}
+
+
+
+tr{
+    display: grid;
+    grid-template-columns: minmax(140px, 345px) minmax(80px, 141px);
+    justify-content:space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+
+tr:last-child{
+    margin-bottom: 40px;
+}
+
+
+.our-projects__button {
+    width: 228px;
+    margin-left: auto;
+}
+
+.our-projects__bg-mobile{
+    display: none;
+}
+
+.table-box-mobile{
+    display: none;
+}
+
+.our-projects__button-mobile.button{
+    display: none;
+}
+
+
+
+
