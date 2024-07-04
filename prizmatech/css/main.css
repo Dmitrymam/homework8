@@ -915,6 +915,10 @@ margin-bottom: 50px;
     font-size: 12px;
 }
 
+.help-LED__field {
+    justify-content: center;
+}
+
 
 
 /* ------footer-top-------- */
@@ -1181,7 +1185,7 @@ margin-bottom: 50px;
         margin-bottom: 21px;
     }
     .header_bg {
-        top: -370px;
+        top: -260px;
     }
 
 
@@ -1208,7 +1212,7 @@ margin-bottom: 50px;
     .header__content-list {
         font-size: 16px;
         gap: 10px;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
     }
 
     .products__price {
@@ -1280,6 +1284,8 @@ margin-bottom: 50px;
 }
 
 @media(max-width: 630px){
+
+
     .header__content-item:nth-child(1) img {
         margin-bottom: 24px;
     }
@@ -1293,7 +1299,7 @@ margin-bottom: 50px;
         margin-bottom: 40px;
     }
     .header_bg {
-        top: -360px;
+        top: -285px;
     }
 
     .header_bg img{
@@ -1304,6 +1310,11 @@ margin-bottom: 50px;
 
 
 @media(max-width: 500px) {
+
+    .calculation__LED-left-select::after {
+       top: 11px;
+    }
+
 
     .main__products {
         padding-top: 25px;
@@ -1351,12 +1362,6 @@ margin-bottom: 50px;
     .footer-bottom {
         padding-top: 30px;
     }
-
-
-    .header__telephon {
-        display: none;
-    }
-
 
     .header__content-item:nth-child(2) img {
         margin-bottom: 30px;
@@ -1406,7 +1411,7 @@ margin-bottom: 50px;
     }
 
     .header_bg {
-        top: -320px;
+        top: -285px;
     }
 
     .header__content-item{
@@ -1421,13 +1426,16 @@ margin-bottom: 50px;
     }
 
     .header__content-list {
-        margin-bottom: 30px;
+        margin-bottom: 45px;
     }
 
     .header__content-item img{
         width: 40%;
     }
 
+    .our-projects__controls {
+        display: none;
+    }
 
     .products__img {
         margin-bottom: 25px;
@@ -1570,7 +1578,7 @@ margin-bottom: 50px;
     }
 
     .our-clients__controls {
-        margin-top: 20px;
+        display: none;
     }
 
     .our-clients__control-left, .our-clients__control-right {
@@ -1705,9 +1713,9 @@ margin-bottom: 50px;
 }
 
 @media(max-width: 498px){
-    .header_bg {
+    /* .header_bg {
         top: -340px;
-    }
+    } */
 }
 
 @media(max-width: 450px) {
@@ -1722,7 +1730,7 @@ margin-bottom: 50px;
         margin-bottom: 23px;
     }
     .header_bg {
-        top: -325px;
+        top: -275px;
     }
 
     .header__title {
@@ -1731,7 +1739,7 @@ margin-bottom: 50px;
     }
 
     .header__content-list {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .header__content-item{
@@ -2115,9 +2123,9 @@ margin-bottom: 50px;
     }
     
     @media(max-width: 357px){
-        .header_bg {
+        /* .header_bg {
             top: -342px;
-        }
+        } */
     }
    
 

@@ -32,7 +32,6 @@ new Swiper('.our-projects__slider', {
     slidesPerView: 1,
     spaceBetween: 210,
 
-
     navigation: {
     
 
